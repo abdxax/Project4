@@ -19,18 +19,18 @@ import java.util.ArrayList;
 public class AdapterAlbom extends ArrayAdapter<Songster> {
     ArrayList<Songster> songsters;
 
-    public AdapterAlbom(@NonNull Context context,  ArrayList<Songster> songsters) {
-        super(context, 0,songsters);
+    public AdapterAlbom(@NonNull Context context, ArrayList<Songster> songsters) {
+        super(context, 0, songsters);
         this.songsters = songsters;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater=LayoutInflater.from(getContext());
-        View view=inflater.inflate(R.layout.list_albom,parent,false);
-        ImageView imageView=(ImageView) view.findViewById(R.id.imageView);
-        TextView name=(TextView) view.findViewById(R.id.textView);
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.list_albom, parent, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+        TextView name = (TextView) view.findViewById(R.id.textView);
         imageView.setImageResource(songsters.get(position).getImage());
         name.setText(songsters.get(position).getName());
         return view;

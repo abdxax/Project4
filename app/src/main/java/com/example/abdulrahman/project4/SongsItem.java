@@ -4,15 +4,15 @@ package com.example.abdulrahman.project4;
  * Created by Abdulrahman on 29/03/18.
  */
 
-public class Songs {
+public class SongsItem {
     private String song;
     private int year;
     private int image;
 
-    public Songs(String song, int year,int image) {
+    public SongsItem(String song, int year, int image) {
         this.song = song;
         this.year = year;
-        this.image=image;
+        this.image = image;
     }
 
     public String getSong() {

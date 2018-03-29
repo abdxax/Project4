@@ -13,14 +13,14 @@ public class Songster {
     private int id;
     private String dead;
 
-    public Songster(String name, String country, int age, String lastAlbom,int image,int id,String dead) {
+    public Songster(String name, String country, int age, String lastAlbom, int image, int id, String dead) {
         this.name = name;
         Country = country;
         this.age = age;
         this.lastAlbom = lastAlbom;
-        this.image=image;
-        this.id=id;
-        this.dead=dead;
+        this.image = image;
+        this.id = id;
+        this.dead = dead;
     }
 
     public String getName() {

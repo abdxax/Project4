@@ -16,27 +16,27 @@ import java.util.ArrayList;
  * Created by Abdulrahman on 29/03/18.
  */
 
-public class AdpaterSong extends ArrayAdapter<Songs> {
+public class AdpaterSong extends ArrayAdapter<SongsItem> {
 
-    ArrayList<Songs> songs;
+    ArrayList<SongsItem> songs;
 
-    public AdpaterSong(@NonNull Context context,  ArrayList<Songs> songs) {
-        super(context, 0,songs);
+    public AdpaterSong(@NonNull Context context, ArrayList<SongsItem> songs) {
+        super(context, 0, songs);
         this.songs = songs;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater=LayoutInflater.from(getContext());
-        View view=inflater.inflate(R.layout.list_songdis,parent,false);
-        ImageView imageView=(ImageView) view.findViewById(R.id.imageView3);
-        TextView name=(TextView)view.findViewById(R.id.textView7);
-        TextView year=(TextView)view.findViewById(R.id.textView8);
-        Songs songs1=songs.get(position);
-        imageView.setImageResource(songs1.getImage());
-        name.setText(songs1.getSong());
-        year.setText(songs1.getYear()+"");
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.list_songdis, parent, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView3);
+        TextView name = (TextView) view.findViewById(R.id.textView7);
+        TextView year = (TextView) view.findViewById(R.id.textView8);
+        SongsItem songsItem1 = songs.get(position);
+        imageView.setImageResource(songsItem1.getImage());
+        name.setText(songsItem1.getSong());
+        year.setText(songsItem1.getYear() + "");
         return view;
     }
 }
